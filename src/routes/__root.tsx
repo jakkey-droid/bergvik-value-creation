@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Bergvik Eiendom" },
+      { name: "description", content: "Bergvik Prime is a premium website for a real estate investment company." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Bergvik Eiendom" },
+      { property: "og:description", content: "Bergvik Prime is a premium website for a real estate investment company." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Bergvik Eiendom" },
+      { name: "twitter:description", content: "Bergvik Prime is a premium website for a real estate investment company." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/YcxTAFKqK6MCHp4ovbSVRN4lAS72/social-images/social-1778450560029-Skjermbilde_2026-05-10_233232.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/YcxTAFKqK6MCHp4ovbSVRN4lAS72/social-images/social-1778450560029-Skjermbilde_2026-05-10_233232.webp" },
     ],
     links: [
       {

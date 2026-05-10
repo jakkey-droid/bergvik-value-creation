@@ -1,26 +1,43 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/site/Header";
+import { Hero } from "@/components/site/Hero";
+import { About } from "@/components/site/About";
+import { Services } from "@/components/site/Services";
+import { Values } from "@/components/site/Values";
+import { Bergen } from "@/components/site/Bergen";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
+import { useReveal } from "@/hooks/use-reveal";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Bergvik Eiendom AS — Long-Term Value Through Real Estate" },
+      {
+        name: "description",
+        content:
+          "Bergvik Eiendom AS is a Bergen-based real estate company focused on strategic investments, property development and long-term growth.",
+      },
+      { property: "og:title", content: "Bergvik Eiendom AS — Real Estate Investments in Bergen" },
+      { property: "og:description", content: "Strategic investments, property development and long-term growth — rooted in Bergen, Norway." },
+      { property: "og:type", content: "website" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  useReveal();
+  return (
+    <main className="bg-background text-foreground antialiased">
+      <Header />
+      <Hero />
+      <About />
+      <Services />
+      <Values />
+      <Bergen />
+      <Contact />
+      <Footer />
+    </main>
+  );
 }

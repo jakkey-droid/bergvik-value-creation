@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import logo from "@/assets/logo.png";
 
 const nav = [
@@ -47,12 +48,16 @@ export function Header() {
           ))}
         </nav>
 
-        <a
-          href="#contact"
-          className="hidden md:inline-flex items-center gap-2 border border-gold/40 px-5 py-2.5 text-xs tracking-[0.22em] uppercase text-gold hover:bg-gold hover:text-primary-foreground transition-all duration-500"
-        >
-          Get in touch
-        </a>
+        <div className="hidden md:flex items-center gap-5">
+          <span className="text-[10px] tracking-luxury uppercase text-gold">EN</span>
+          <Link to="/no" className="text-[10px] tracking-luxury uppercase text-foreground/50 hover:text-gold transition-colors">NO</Link>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 border border-gold/40 px-5 py-2.5 text-xs tracking-[0.22em] uppercase text-gold hover:bg-gold hover:text-primary-foreground transition-all duration-500"
+          >
+            Get in touch
+          </a>
+        </div>
 
         <button
           aria-label="Menu"
@@ -81,6 +86,7 @@ export function Header() {
               {n.label}
             </a>
           ))}
+          <Link to="/no" onClick={() => setOpen(false)} className="text-sm tracking-[0.2em] uppercase text-foreground/60 hover:text-gold pt-2 border-t border-gold/15">Norsk</Link>
         </div>
       </div>
     </header>

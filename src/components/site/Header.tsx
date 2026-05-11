@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/logo.png";
+import logoMark from "@/assets/logo-mark.png";
 
 const nav = [
   { label: "About", href: "#about" },
@@ -28,14 +28,16 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-10">
-        <a href="#top" className="group flex items-center">
+        <a href="#top" className="flex items-center gap-4 group">
           <img
-            src={logo}
+            src={logoMark}
             alt="Bergvik Eiendom AS"
-            className={`object-contain transition-all duration-700 group-hover:scale-[1.03] ${
-              scrolled ? "h-20 w-20 sm:h-24 sm:w-24" : "h-28 w-28 sm:h-36 sm:w-36"
-            }`}
+            className={`object-contain transition-all duration-700 group-hover:scale-105 ${scrolled ? "h-11 w-18" : "h-14 w-24"}`}
           />
+          <div className="hidden sm:block">
+            <div className="font-display text-xl text-gradient-gold leading-none">Bergvik</div>
+            <div className="text-[10px] tracking-luxury text-muted-foreground uppercase mt-1.5">Eiendom AS</div>
+          </div>
         </a>
 
         <nav className="hidden md:flex items-center gap-10">

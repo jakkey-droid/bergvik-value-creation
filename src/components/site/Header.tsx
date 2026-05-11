@@ -28,11 +28,11 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-10">
-        <a href="#top" className="flex items-center gap-3 group">
-          <img src={logo} alt="Bergvik Eiendom AS" className="h-10 w-10 object-contain transition-transform duration-700 group-hover:scale-105" />
+        <a href="#top" className="flex items-center gap-4 group">
+          <img src={logo} alt="Bergvik Eiendom AS" className={`object-contain transition-all duration-700 group-hover:scale-105 ${scrolled ? "h-14 w-14" : "h-20 w-20"}`} />
           <div className="hidden sm:block">
-            <div className="font-display text-base text-gradient-gold leading-none">Bergvik</div>
-            <div className="text-[10px] tracking-luxury text-muted-foreground uppercase mt-1">Eiendom AS</div>
+            <div className="font-display text-xl text-gradient-gold leading-none">Bergvik</div>
+            <div className="text-[10px] tracking-luxury text-muted-foreground uppercase mt-1.5">Eiendom AS</div>
           </div>
         </a>
 

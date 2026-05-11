@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { useReveal } from "@/hooks/use-reveal";
 import logo from "@/assets/logo.png";
+import logoMark from "@/assets/logo-mark.png";
 import heroImg from "@/assets/hero-bergen.jpg";
 import architecture from "@/assets/architecture.jpg";
 import bergen from "@/assets/bergen-aerial.jpg";
@@ -46,10 +47,10 @@ function Header() {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${scrolled ? "glass py-3" : "bg-transparent py-6"}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-10">
-        <a href="#top" className="flex items-center gap-3 group">
-          <img src={logo} alt="Bergvik Eiendom AS" className="h-10 w-10 object-contain transition-transform duration-700 group-hover:scale-105" />
+        <a href="#top" className="flex items-center gap-4 group">
+          <img src={logoMark} alt="Bergvik Eiendom AS" className={`object-contain transition-all duration-700 group-hover:scale-105 ${scrolled ? "h-11 w-18" : "h-14 w-24"}`} />
           <div className="hidden sm:block">
-            <div className="font-display text-base text-gradient-gold leading-none">Bergvik</div>
+            <div className="font-display text-xl text-gradient-gold leading-none">Bergvik</div>
             <div className="text-[10px] tracking-luxury text-muted-foreground uppercase mt-1">Eiendom AS</div>
           </div>
         </a>
